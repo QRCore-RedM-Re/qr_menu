@@ -7,7 +7,7 @@ This script allows you create menu like RDR2.
 if not -> [RedEM](https://github.com/kanersps/redem)
 - add ```ensure qr_menu``` after ```ensure qr-core```
 
-![alt text](https://i.imgur.com/XwI6mJH.jpeg)
+![alt text](https://i.imgur.com/h7CIxyM.png)
 
 ## 2.Usage
 Add this on top your client side file
