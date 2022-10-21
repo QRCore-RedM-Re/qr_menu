@@ -1,43 +1,29 @@
 (function() {
-	let MenuTpl =
-		'<div id="menu_{{_namespace}}_{{_name}}" class="menu{{#align}} align-{{align}}{{/align}}">' +
-			'<div class="head"><span>{{{title}}}</span></div>' +					
-				'<div class="subtext">{{{subtext}}}</div>' +
-                '<div class="topline"></div>' +
-				'<div class="menu-items">' +
-				
-					'{{#elements}}' +
-						'<div class="menu-item {{#selected}}selected{{/selected}}">' +
-							'<div id="item-label">{{label}}</div>'+
-							'{{#isSlider}}'+
-							'<div class="arrows">'+
-							'<i class="fas fa-arrow-circle-left"style="font-size:20px;color: rgb(239, 228, 205);text-shadow:2px 2px 4px #000000;"></i>'+
-							'<div id="slider-label">{{{sliderLabel}}}</div>'+
-							'<i class="fas fa-arrow-alt-circle-right"style="font-size:20px;color: rgb(239, 228, 205);text-shadow:2px 2px 4px #000000;"></i>'+
-							'</div>'+
-							'{{/isSlider}}' +
-							'{{#isCheck}}<div class="check">{{#isActive}}<i class="fas fa-check-square"></i> {{/isActive}} {{^isActive}}<i class="fas fa-check-square"></i>{{/isActive}}  </div>{{/isCheck}}' + 
-						'</div>' +	
-					'{{/elements}}' +
-				'</div>'+
-                ' {{#isBigger}}'+
-                    ' <div class="scrollbottom"></div>' +
-                  '{{/isBigger}}'+
-                  ' {{^isBigger}}'+
-                 '  <div class="noscrollbottom"></div>' +
-                 ' {{/isBigger}}'+
-				'{{#elements}}' +
-				'{{#selected}}' +
-				'<div class="options-amount">{{{list_id}}} z {{{list_max}}}</div>' +
-				'<div class="desciption">{{{desc}}} {{#labelInDesc}} {{{DescriptionLabel}}} {{/labelInDesc}}  </div>' +
-                '<div class="topline"></div>' +
-                '<div class="subdesciption">{{{subdesc}}} {{#labelInSubDesc}} {{{SubDescriptionLabel}}} {{/labelInSubDesc}}  </div>' +
-				'{{/selected}}' +
-				'{{/elements}}' +
-				'<br>'+
-			'</div>' +
-		'</div>'
-	;
+    let MenuTpl =
+        '<div id="menu_{{_namespace}}_{{_name}}" class="menu{{#align}} align-{{align}}{{/align}}">' +
+        '<div class="head"><span>{{{title}}}</span></div>' +
+        '<div class="desciptions">{{{subtext}}}</div>' +
+        '<div class="menu-items">' +
+        '<div class="topline"></div>' +
+        '{{#elements}}' +
+        '<div class="menu-item {{#selected}}selected{{/selected}} {{#isSlider}}slider{{/isSlider}}" style="height:{{itemHeight}};!important">' +
+        '<div id="item-label">{{{label}}}</div><div class="arrows">{{#isSlider}}<i class="fas fa-arrow-circle-left"style="font-size:15px;color: rgb(239, 228, 205);text-shadow:2px 2px 4px #000000;"></i><div id="slider-label">{{{sliderLabel}}}</div><i class="fas fa-arrow-alt-circle-right"style="font-size:15px;color: rgb(239, 228, 205);text-shadow:2px 2px 4px #000000;"></i>{{/isSlider}}</div>' +
+        '</div>' +
+
+        '{{/elements}}' +
+        '</div>' +
+        '<div class="scrollbottom"></div>' +
+        '{{#elements}}' +
+        '{{#selected}}' +
+        '<div class="options-amount">{{{list_id}}}/{{{list_max}}}</div>' +
+        '<br>' +
+        '<div class="desciption">{{{desc}}}</div>' +
+        '{{/selected}}' +
+        '{{/elements}}' +
+        '<br>' +
+        '</div>' +
+        '</div>'
+        ;
 
     window.MenuData = {};
     MenuData.ResourceName = 'qr_menu';
