@@ -15,12 +15,10 @@
 	min-width: 510px;
 	height: auto;
 	color: rgb(239, 228, 205);
+	text-shadow:2px 2px 4px #000000;
 	position: absolute;
 	padding: 8px;
-	/* background-image: url(inkroller_1a.png); */
 	background-color: #161923f2;
-	/* background-repeat: no-repeat;
-	background-position: center; */
 	margin-top: 5%;
 	background-size: 100% 100%;
 	border-radius: 5%;
@@ -63,6 +61,7 @@
 	text-align: center;
 	height: 100px;
 	color: rgb(239, 228, 205);
+	text-shadow:2px 2px 4px #000000;
 	font-weight: 300;
 	font-size: 30px;
 	background-image: url(menu_header_1a.png);
@@ -239,7 +238,6 @@ i {
 	transform: translate(-50%, -50%);
 }
 
-/* WebKit scrollbar properties */
 ::-webkit-scrollbar {
 	width: 8px;
 	border-left: 4px solid #272733;
@@ -280,5 +278,3 @@ i {
 
 
 }
-
-/* MADE BY SLIZZARN - DISCORD: slizzarn#1144 GITHUB: https://github.com/slizzarn-fivem */
